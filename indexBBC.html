@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+ <title>Learning CSS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+ </script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="cssBBC.css">
+</head>
+<body>
+
+<header>
+	<div id="topbar">
+		<div class="fixedwidth">
+			<div id="logodiv">
+				<a href="#"><img id="bbclogo" src="images/bbclogo.png" /></a>
+			</div>
+			<div id="signindiv"><a href="signinBBC.html">
+				<img id="signinlogo" src="images/signinlogo.png"><span>  Sign in</span></a>
+			</div>
+			<div id="belldiv">
+				<a href="#"><img id="bellimg" src="images/belllogo.png"></a>
+			</div>
+			<ul id="topmenu">
+				<li class="fix"><a href="#">News</a></li>
+				<li><a href="#">Sport</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">iPlayer</a></li>
+				<li><a href="#">TV</a></li>
+				<li><a href="#">Radio</a></li>
+				<li><a href="#">More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
+			</ul>
+			<form id="topsearch">
+				<div><input type="search" placeholder="Search">
+					<a href="#"><i class="fa fa-search"></i></a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="middlebar">
+		<div class="fixedwidth">
+			<a id="newslogo" href="#"><img src="images/newslogo.png" ></a>
+			<p id="findlocalnews"><a href="#">Find local news</a><img src="images/locationlogo.png"></p>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="bottombar">
+		<div class="fixedwidth">
+			<ul id="bottombarmenu">
+				<li><a href="#" style="padding-left: 8px" class="selected"><span>Home</span></a></li>
+				<li><a href="#"><span>UK</span></a></li>
+				<li><a href="#"><span>World</span></a></li>
+				<li><a href="#"><span>Business</span></a></li>
+				<li><a href="#"><span>Politics</span></a></li>
+				<li><a href="#"><span>Tech</span></a></li>
+				<li><a href="#"><span>Science</span></a></li>
+				<li><a href="#"><span>Health</span></a></li>
+				<li><a href="#"><span>Education</span></a></li>
+				<li><a href="#"><span>Entertainment &amp; Arts</span></a></li>
+				<li><a href="#"><span>Video &amp; Audio</span></a></li>
+				<li><a href="#"><span style="border-right: none">More</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="lowerbar">
+		<div class="fixedwidth">
+			<ul id="lowerbarmenu">
+				<li><a href="#" style="padding-left: 8px"><span>England</span></a></li>
+				<li><a href="#"><span>N. Ireland</span></a></li>
+				<li><a href="#"><span>Scotland</span></a></li>
+				<li><a href="#"><span>Alba</span></a></li>
+				<li><a href="#"><span>Wales</span></a></li>
+				<li><a href="#"><span style="border-right: none">Cymru</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</header>
+
+<article>
+	<div class="fixedwidth">		
+		<section id="first" class="colw"><a href="#" id="first1">
+			<h3>One million sign Stop Trump petition</h3>
+			<p>A campaign to stop the US president's UK state visit gains momentum over his immigration crackdown.</p>
+			<p><span class="lnright">&#8986; 11h</span></p></a><p><a href="#" class="newsid"> UK</a></p>
+			<ul>
+				<li><p>Thousands to join protests</p></li>
+				<li><p>What is a state visit?</p></li>
+			</ul>
+		</section>
+		<section id="second" class="colw2"><a href='#'>
+			<img src="images/sectioncentretop.png"></a>
+		</section>
+		<section id="third" class="colw"><a href='#' id="third3">
+			<img src="images/sectioncentreright.png">
+			<h5>Trump stands firm over travel ban.</h5>
+			<p>Donald Trump denies it's a Muslim ban as mass protests continue amid strong international criticism.</p>
+			<p>&#8986; <span class="lnright">12h</span></p></a><p><a href="#" class="newsid"> US &amp; Canada</a></p>
+		</section>
+	</div>
+	<div class="clearfix"></div>
+	<div class="fixedwidth">
+		<section id="second1" class="colw"><a href='#' id='sec1'>
+			<img src="images/sectionsecondfirst.png">
+			<h5>Six killed in Canada mosque shooting</h5>
+	 		<p>Shots were fired at the Quebec Islamic Cultural Centre late on Sunday, with two suspects arrested.</p>
+			<p><span class="lnright">&#8986; 11h</span></p></a><p><a href='#' class="newsid"> US &amp; Canada</a></p>
+		</section>
+		<section id="second2" class="colw"><a href='#' id=sec2>
+			<img src="images/sectionsecondsecond.png">
+			<h5>Who could be the next Doctor?</h5>
+			<p>Peter Capaldi has announced he is to leave Doctor Who - meaning the search is on for his replacement.</p>
+			<p>&#8986; <span class="lnright">5 hours ago</span></p><p><a href='#' class="newsid"> UK Politics </span></a></p>
+		</section>
+		<section id="second3" class="colw"><a href='#' id='sec3'>
+			<img src="images/sectionsecondthird.png">
+			<h5>Aston Villa did not tell police of abusive scout</h5>
+			<p>Aston Villa sacked a scout accused of sexually abusing boys in 1998 but did not go to police.</p>
+			<p>&#8986; <span class="lnright">11h</span></p></a><p><a href='#' class="newsid"> UK</p></a>
+		</section>
+		<section id="second4" class="colw"><a href='#' id='sec4'>
+			<img src="images/sectionsecondfourth.png">
+			<h5>Cosmic head rub, sir</h5>
+			<p>How a backstreet barber racked up 20 million YouTube views.</p>
+			<p>&#8986; <span class="lnright">11h</span></p></a><p><a href='#' class="newsid"> Asia</p></a>
+		</section>
+	</div>
+	<div class="clearfix"></div>
+	<div class="fixedwidth bottommarg"></div>
+</article>
+
+
+
+<script>
+$(document).ready(function(){
+    $("#topmenu li.fix").siblings().css({"margin-left": "-5px"});
+    
+    $("#first1, #second").hover(function() {
+    	$("#first1 h3").css({'text-decoration': 'underline', 'color': '#1380a1'}); }, function() {
+    		$("#first1 h3").css({'text-decoration': 'none', 'color': '#000'});
+    });
+});
+</script>
+
+</body>
+</html>
