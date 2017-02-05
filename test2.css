@@ -58,6 +58,7 @@ SET UP TOP BAR OF HEADER
 	font-size: 30px;
 	margin: 20px 0 65px;
 }
+
 .group {
 	position: relative;
 }
@@ -108,18 +109,18 @@ input:valid ~ label {
 	width: 0;
 	position: absolute;
 	bottom: 1px;
-	transition: 0.2s;
-}
-.bar:before {
+	transition: 0.3s ease all;
 	left: 0%;
 }
-input:focus ~ .bar:before, input:valid ~ before {
+input:focus ~ .bar:before,
+input:valid ~ .bar:before {
 	width: 100%;
 }
 
 button:hover {
 	background-color: #005bc8;
 }
+
 #signinform p {
 	margin: 0;
 	padding: 26px 0;

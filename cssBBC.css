@@ -41,7 +41,7 @@ SET UP TOP BAR OF HEADER
 	box-sizing: border-box;
 	height: 40px;
 }
-#signindiv:after {
+signindiv:after {
 	content: "";
 	position: absolute;
 	width: 8px;
@@ -63,6 +63,10 @@ SET UP TOP BAR OF HEADER
 #signindiv a {
 	padding: 0 82px 9px 10px;
 	display: inline-block;
+}
+#signindiv a:link,
+#signindiv a:active {
+	color: #000;
 }
 #signinlogo {
 	display: inline-block;
