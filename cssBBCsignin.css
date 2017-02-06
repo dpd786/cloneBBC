@@ -185,6 +185,9 @@ button:hover {
 }
 
 footer {
+	margin-top: 200px;
 	height: 140px;
 	background-color: #2d2d2d;
+	color: #fff;
+	text-align: center;
 }
