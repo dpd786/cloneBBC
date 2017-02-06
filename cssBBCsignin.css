@@ -62,7 +62,7 @@ SET UP TOP BAR OF HEADER
 	position: relative;
 }
 #signinform .group p {
-	
+	display: none;
 	font-size: 13px;
 	margin: 16px 0 50px;
 	padding: 17px 0;
@@ -118,7 +118,7 @@ input:valid ~ label {
 	width: 0;
 	position: absolute;
 	bottom: 1px;
-	background: #000;
+	background-color: #000;
 	transition: 0.2s;
 	left: 0%;
 }
@@ -127,7 +127,32 @@ input:focus ~ .bar:before,
 input:valid ~ .bar:before {
 	width: 100%;
 }
-
+.errorbar {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #e4134f;
+	z-index: 2;
+	top: 41px;
+}
+.errormess:before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #e4134f;
+	border-bottom: 0 solid #e4134f;
+	border-right: 0 solid #e4134f;
+	top: 55%;
+	left: 8%;
+	margin-top: -4px;
+	margin-left: -4px;
+	transform: rotate(45deg);
+	background-color: #e4134f;
+}
 button:hover {
 	background-color: #005bc8;
 }

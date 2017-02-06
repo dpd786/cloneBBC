@@ -24,13 +24,15 @@
 						<input id="username" type="text" name="username" required />
 						<label for="username">Email or username</label>
 						<span class="bar"></span>
-						<p class="errbaremail">Sorry, that username's too short. It needs to be at least two characters.</p>
+						<div class="errorbar"></div>
+						<p class="errormess">Sorry, that username's too short. It needs to be at least two characters.</p>
 					</div>
 					<div class="group">
 						<input id="password" type="Password" name="password" required>
 						<label for="password">Password</label>
 						<span class="bar"></span>
-						<p class="errbarpass">Sorry, that password is too short. It needs to be six characters or more.</p>
+						<div class="errorbar"></div>
+						<p class="errormess">Sorry, that password is too short. It needs to be six characters or more.</p>
 					</div>
 					<button>Sign in</button>
 					<p><a href='#'>Need help signing in?</a></p>
@@ -45,5 +47,28 @@
 	<footer>
 		some footer info
 	</footer>
+
+<script>
+$(document).ready(function(){
+    $("input").on('blur', function(){
+    	if( $(this).val().length == 1) {
+    		alert($(this).val().length);
+    		$(this).siblings("p").last().css("display", "block");
+    		$(this).siblings(".errorbar").css("display", "block");    		
+    	} else {
+    		$(this).siblings("p").last().css("display", "none");
+    		$(this).siblings(".errorbar").css("display", "none");
+    	}
+    });
+
+    $("input").on('keyup', function(){
+    	if( $(this).val().length >= 2) {
+    		$(this).siblings("p").last().css("display", "none");
+    		$(this).siblings(".errorbar").css("display", "none");    		
+    	} 
+    });
+});
+</script>
+
 </body>
 </html>

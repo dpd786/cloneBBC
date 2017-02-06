@@ -41,7 +41,7 @@ SET UP TOP BAR OF HEADER
 	box-sizing: border-box;
 	height: 40px;
 }
-signindiv:after {
+#signindiv:after {
 	content: "";
 	position: absolute;
 	width: 8px;
