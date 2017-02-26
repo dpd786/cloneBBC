@@ -55,6 +55,9 @@ var kpasscheck = false;
 var emailcheck = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
 
 $(document).ready(function(){
+	$(document).on("keypress", "form", function(event) { 
+    	return event.keyCode != 13;
+	});	
 	$("input").on("keyup", function() {
 		if($(this).attr("id") == "username" && kusercheck == false) {
 			kusercheck = true

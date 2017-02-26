@@ -10,6 +10,7 @@
  </script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="cssBBC.css">
+ <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 </head>
 <body>
 
@@ -24,9 +25,9 @@
 			</div>
 			<div id="belldiv">
 				<a href="#"><img id="bellimg" src="images/belllogo.png"></a>
-			</div>
+			</div>			
 			<ul id="topmenu">
-				<li class="fix"><a href="#">News</a></li>
+				<li class="fix"><a href="indexBBC.html">News</a></li>
 				<li><a href="#">Sport</a></li>
 				<li><a href="#">Weather</a></li>
 				<li><a href="#">iPlayer</a></li>
@@ -41,6 +42,21 @@
 			</form>
 		</div>
 	</div>
+	<div class="clearfix">
+		<div id="hiddenBell-content">
+			<div class="fixedwidth">
+				<div class="hiddenBell-sub">
+					<p id="hfirst">Never miss<br>your favourites</p>
+					<p id="hsecond">Get notifications about your favourite<br>programmes, music and more.</p>
+					<p id="hthird"><a href="signinBBC.html">
+					<img id="signinlogo2" src="images/signindiv2.png"></a><span id="regbbc"> to the BBC, or <a id="register" href='#'>Register</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix">
+	<div id="testsearch">Email: <input id="2" type="text" name="email"></div>
 	<div class="clearfix"></div>
 	<div id="middlebar">
 		<div class="fixedwidth">
@@ -135,8 +151,6 @@
 	<div class="fixedwidth bottommarg"></div>
 </article>
 
-
-
 <script>
 $(document).ready(function(){
     $("#topmenu li.fix").siblings().css({"margin-left": "-5px"});
@@ -145,6 +159,36 @@ $(document).ready(function(){
     	$("#first1 h3").css({'text-decoration': 'underline', 'color': '#1380a1'}); }, function() {
     		$("#first1 h3").css({'text-decoration': 'none', 'color': '#000'});
     });
+    $("#belldiv a").on('click', function() {
+    	$("#hiddenBell-content").slideToggle();
+    	$(this).addClass("addbelldiv");
+    });
+    $(this).on('focusin', function() {
+    	if(!($(this).hasClass("addbelldiv"))) {
+    		$(this).removeclass("addbelldiv");
+    	}
+    });
+/* code for seach box */
+    $("#1").focus(function(){
+        $(this).css("background-color", "#cccccc");
+        
+    });
+    $("#1").on("keyup", function() {
+    	$("div").slideDown();
+        $("#2").focus();
+        $("#1").blur();
+        $("#2").val($("#1:text").val());
+        $("#1:text").val("");
+        
+        
+        
+        });
+    
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+    
+
 });
 </script>
 
