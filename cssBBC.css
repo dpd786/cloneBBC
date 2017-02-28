@@ -255,15 +255,126 @@ SET UP hiddenBellBar OF HEADER
 
 /**********************************************
 
-SET UP SEARCHBAR DROPDOWN
+SET UP DROPMENUBAR
 
 **********************************************/
 
-#testsearch {
+#hiddenMenu-content {
 	display: none;
+	overflow: hidden;
+	height: 196px;
 	width: 100%;
+	background: linear-gradient(to bottom, #0091c7 0%, #0079c7 100%);
+	color: #fff;
+}
+#hiddenMenu-content p {
+	margin: 0;
+	padding: 0;
+}
+#hiddenMenu-content #hfirst {
+	font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	padding: 12px 0 10px;
+	line-height: 30px;
+}
+#hiddenMenu-content #hthird {
+	font-size: 18px;
+	height: 37px;
+	line-height: 26px;
+	margin: 24px 0 12px;
+}
+#hiddenMenu-content #hthird a {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	text-decoration: none;
+}
+#hiddenMenu-content #regbbc {
+	display: inline-block;
+	padding: 5px;
+	position: relative;
+	top: -13px;
+}
+#hiddenMenu-content a:hover {
+	box-shadow: none;
+	text-decoration: none;
 }
 
+#hiddenMenu-content #register {
+	font-weight: bold;
+}
+#hiddenMenu-content #register:hover {
+	box-shadow: none;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #fff;
+}
+
+.addMenudiv {
+	box-shadow: inset 0 -4px 0 #262626;
+}
+
+/**********************************************
+
+SET UP DROPDEARCHBAR
+
+**********************************************/
+
+/*#hiddenBell-content {
+	display: none;
+	overflow: hidden;
+	height: 196px;
+	width: 100%;
+	background: linear-gradient(to bottom, #0091c7 0%, #0079c7 100%);
+	color: #fff;
+}
+#hiddenBell-content p {
+	margin: 0;
+	padding: 0;
+}
+#hiddenBell-content #hfirst {
+	font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	padding: 12px 0 10px;
+	line-height: 30px;
+}
+#hiddenBell-content #hthird {
+	font-size: 18px;
+	height: 37px;
+	line-height: 26px;
+	margin: 24px 0 12px;
+}
+#hiddenBell-content #hthird a {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	text-decoration: none;
+}
+#hiddenBell-content #regbbc {
+	display: inline-block;
+	padding: 5px;
+	position: relative;
+	top: -13px;
+}
+#hiddenBell-content a:hover {
+	box-shadow: none;
+	text-decoration: none;
+}
+
+#hiddenBell-content #register {
+	font-weight: bold;
+}
+#hiddenBell-content #register:hover {
+	box-shadow: none;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #fff;
+}
+
+.addbelldiv {
+	box-shadow: inset 0 -4px 0 #006def; 
+}
+*/
 
 /**********************************************
 

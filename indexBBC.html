@@ -33,7 +33,7 @@
 				<li><a href="#">iPlayer</a></li>
 				<li><a href="#">TV</a></li>
 				<li><a href="#">Radio</a></li>
-				<li><a href="#">More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
+				<li id="topMenuDrop"><a href="#">More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
 			</ul>
 			<form id="topsearch">
 				<div><input type="search" placeholder="Search">
@@ -42,7 +42,30 @@
 			</form>
 		</div>
 	</div>
-	<div class="clearfix">
+	<div class="clearfix"></div>
+	<div class="topmenuhiddenbars">
+		<div id="hiddenBell-content">
+			<div class="fixedwidth">
+				<div class="hiddenBell-sub">
+					<p id="hfirst">Never miss<br>your favourites</p>
+					<p id="hsecond">Get notifications about your favourite<br>programmes, music and more.</p>
+					<p id="hthird"><a href="signinBBC.html">
+					<img id="signinlogo2" src="images/signindiv2.png"></a><span id="regbbc"> to the BBC, or <a id="register" href='#'>Register</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="hiddenMenu-content">
+			<div class="fixedwidth">
+				<div class="hiddenMenu-sub">
+					<p id="hfirst">Never miss<br>your favourites</p>
+					<p id="hsecond">Get notifications about your favourite<br>programmes, music and more.</p>
+					<p id="hthird"><a href="signinBBC.html">
+					<img id="signinlogo2" src="images/signindiv2.png"></a><span id="regbbc"> to the BBC, or <a id="register" href='#'>Register</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
 		<div id="hiddenBell-content">
 			<div class="fixedwidth">
 				<div class="hiddenBell-sub">
@@ -55,8 +78,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="clearfix">
-	<div id="testsearch">Email: <input id="2" type="text" name="email"></div>
 	<div class="clearfix"></div>
 	<div id="middlebar">
 		<div class="fixedwidth">
@@ -159,17 +180,26 @@ $(document).ready(function(){
     	$("#first1 h3").css({'text-decoration': 'underline', 'color': '#1380a1'}); }, function() {
     		$("#first1 h3").css({'text-decoration': 'none', 'color': '#000'});
     });
-    $("#belldiv a").on('click', function() {
-    	$("#hiddenBell-content").slideToggle();
-    	$(this).addClass("addbelldiv");
-    });
-    $(this).on('focusin', function() {
-    	if(!($(this).hasClass("addbelldiv"))) {
-    		$(this).removeclass("addbelldiv");
-    	}
-    });
+    
+
+	$("#belldiv a").on('click', function() {
+ 		$("#topMenuDrop a").removeClass("addMenudiv"); 		
+		$("#hiddenBell-content").slideToggle(500);
+		$(this).addClass("addbelldiv");
+		$("#hiddenMenu-content").css("display", "none");
+	});
+
+
+	$("#topMenuDrop a").on('click', function() {
+		$("#belldiv a").removeClass("addbelldiv");		
+    	$("#hiddenMenu-content").slideToggle(500);
+    	$(this).addClass("addMenudiv");
+    	$("#hiddenBell-content").css("display", "none");
+    }); 
+    
+    
 /* code for seach box */
-    $("#1").focus(function(){
+/*    $("#1").focus(function(){
         $(this).css("background-color", "#cccccc");
         
     });
@@ -188,7 +218,7 @@ $(document).ready(function(){
         $(this).css("background-color", "#ffffff");
     });
     
-
+*/
 });
 </script>
 
