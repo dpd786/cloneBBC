@@ -68,17 +68,12 @@
 		</div>
 		<div id="hiddenSearch-content">
 			<div class="fixedwidth">
-				<div class="hiddenSearch-sub">
-					<p id="hfirst">Never miss<br>your favourites</p>
-					<p id="hsecond">Get notifications about your favourite<br>programmes, music and more.</p>
+				<div class="hiddenSearch-sub">		
 					<form id="hiddenSearch">
 						<div><input type="search" placeholder="Search">
 							<a href="#"><i class="fa fa-search"></i></a>
 						</div>
 					</form>
-					<p id="hthird"><a href="signinBBC.html">
-					<img id="signinlogo2" src="images/signindiv2.png"></a><span id="regbbc"> to the BBC, or <a id="register" href='#'>Register</a></span>
-					</p>
 				</div>
 			</div>
 		</div>
@@ -189,7 +184,7 @@ $(document).ready(function(){
 
 	$("#belldiv a").on('click', function() {
  		$("#topMenuDrop a").removeClass("addMenudiv"); 		
-		$("#hiddenBell-content").slideToggle(500);
+		$("#hiddenBell-content").fadeToggle(0.5);
 		$(this).addClass("addbelldiv");
 		$("#hiddenMenu-content").css("display", "none");
 	});
@@ -197,7 +192,7 @@ $(document).ready(function(){
 
 	$("#topMenuDrop a").on('click', function() {
 		$("#belldiv a").removeClass("addbelldiv");		
-    	$("#hiddenMenu-content").slideToggle(500);
+    	$("#hiddenMenu-content").fadeToggle(0.5);
     	$(this).addClass("addMenudiv");
     	$("#hiddenBell-content").css("display", "none");
     }); 
