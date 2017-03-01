@@ -36,7 +36,7 @@
 				<li id="topMenuDrop"><a href="#">More &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
 			</ul>
 			<form id="topsearch">
-				<div><input type="search" placeholder="Search">
+				<div><input type="search" autocomplete="off" placeholder="Search">
 					<a href="#"><i class="fa fa-search"></i></a>
 				</div>
 			</form>
@@ -66,11 +66,16 @@
 				</div>
 			</div>
 		</div>
-		<div id="hiddenBell-content">
+		<div id="hiddenSearch-content">
 			<div class="fixedwidth">
-				<div class="hiddenBell-sub">
+				<div class="hiddenSearch-sub">
 					<p id="hfirst">Never miss<br>your favourites</p>
 					<p id="hsecond">Get notifications about your favourite<br>programmes, music and more.</p>
+					<form id="hiddenSearch">
+						<div><input type="search" placeholder="Search">
+							<a href="#"><i class="fa fa-search"></i></a>
+						</div>
+					</form>
 					<p id="hthird"><a href="signinBBC.html">
 					<img id="signinlogo2" src="images/signindiv2.png"></a><span id="regbbc"> to the BBC, or <a id="register" href='#'>Register</a></span>
 					</p>
@@ -199,26 +204,19 @@ $(document).ready(function(){
     
     
 /* code for seach box */
-/*    $("#1").focus(function(){
+    $("#topsearch").focus(function(){
         $(this).css("background-color", "#cccccc");
         
     });
-    $("#1").on("keyup", function() {
-    	$("div").slideDown();
-        $("#2").focus();
-        $("#1").blur();
-        $("#2").val($("#1:text").val());
-        $("#1:text").val("");
-        
-        
-        
-        });
-    
-    $("input").blur(function(){
-        $(this).css("background-color", "#ffffff");
+    $("#topsearch").on("keyup", function() {
+    	$("#hiddenSearch-content").slideDown();
+        $("#hiddenSearch input").focus();
+        $("#topsearch").blur();
+        //console.log($("#topsearch input").val());
+        $("#hiddenSearch input").val($("#topsearch input").val());
+        $("#topsearch input").val(""); 
     });
-    
-*/
+
 });
 </script>
 
