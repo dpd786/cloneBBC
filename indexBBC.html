@@ -183,28 +183,58 @@ $(document).ready(function(){
     
 
 	$("#belldiv a").on('click', function() {
- 		$("#topMenuDrop a").removeClass("addMenudiv"); 		
-		$("#hiddenBell-content").fadeToggle(0.5);
-		$(this).addClass("addbelldiv");
-		$("#hiddenMenu-content").css("display", "none");
+		$("#topMenuDrop a").removeClass("addMenudiv");
+
+		if($("#hiddenMenu-content").is(":visible") || $("#hiddenSearch-content").is(":visible")) {
+			$("#hiddenMenu-content").fadeOut(0.5);
+			$("#hiddenSearch-content").fadeOut(0.5);
+    		$("#hiddenBell-content").fadeIn(0.5);
+    		$(this).addClass("addbelldiv");
+    		$("#hiddenSearch input").val("");
+    	} else {
+    		$("#hiddenBell-content").slideToggle(500);
+    		$(this).addClass("addbelldiv");
+    	}  
 	});
 
 
 	$("#topMenuDrop a").on('click', function() {
-		$("#belldiv a").removeClass("addbelldiv");		
-    	$("#hiddenMenu-content").fadeToggle(0.5);
-    	$(this).addClass("addMenudiv");
-    	$("#hiddenBell-content").css("display", "none");
+		$("#belldiv a").removeClass("addbelldiv");
+
+		if($("#hiddenBell-content").is(":visible") || $("#hiddenSearch-content").is(":visible")) {
+			$("#hiddenBell-content").fadeOut(0.5);
+			$("#hiddenSearch-content").fadeOut(0.5);
+    		$("#hiddenMenu-content").fadeIn(0.5);
+    		$(this).addClass("addMenudiv");
+    		$("#hiddenSearch input").val("");
+    	} else {
+    		$("#hiddenMenu-content").slideToggle(500);
+    		$(this).addClass("addMenudiv");
+    	}	
     }); 
     
     
 /* code for seach box */
-    $("#topsearch").focus(function(){
-        $(this).css("background-color", "#cccccc");
-        
+    $("#topsearch input").on("focus", function(){
+        if($("#hiddenBell-content").is(":hidden") && $("#hiddenMenu-content").is(":hidden")) {
+        	$("#belldiv a").removeClass("addbelldiv");
+        	$("#topMenuDrop a").removeClass("addMenudiv");
+        }   		        
     });
+
     $("#topsearch").on("keyup", function() {
-    	$("#hiddenSearch-content").slideDown();
+    	if($("#hiddenBell-content").is(":visible"))  {
+    		$("#belldiv a").removeClass("addbelldiv");
+    		$("#hiddenBell-content").fadeOut(0.5);
+			$("#hiddenSearch-content").fadeIn(0.5);  		
+    	} else if($("#hiddenMenu-content").is(":visible")) {
+    		$("#topMenuDrop a").removeClass("addMenudiv");
+    		$("#hiddenMenu-content").fadeOut(0.5);
+			$("#hiddenSearch-content").fadeIn(0.5); 
+    	} else {
+    		$("#hiddenSearch-content").slideDown();
+    	}
+
         $("#hiddenSearch input").focus();
         $("#topsearch").blur();
         //console.log($("#topsearch input").val());
