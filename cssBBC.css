@@ -460,10 +460,36 @@ SET UP BOTTOM BAR OF HEADER
 #bottombarmenu li a:hover {
 	box-shadow: 0 4px 0 #fff;
 }
+#bottombarmenu #more a:hover {
+	background-color: #000;
+	box-shadow: 0 3px 0 #000;
+}
+
+.addmorecolor {
+	background-color: #000;
+	box-shadow: 0 3px 0 #000;
+}
 
 /**********************************************
 
-SET UP BOTTOM BAR OF HEADER
+SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
+
+**********************************************/
+
+#moredropdown-content {
+	isplay: none;
+	overflow: hidden;
+	height: 120px;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	border-bottom: 2px solid #bb1919;
+}
+
+
+/**********************************************
+
+SET UP LOWER BAR OF HEADER
 
 **********************************************/
 

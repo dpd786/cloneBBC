@@ -111,7 +111,10 @@
 				<li><a href="#"><span>Education</span></a></li>
 				<li><a href="#"><span>Entertainment &amp; Arts</span></a></li>
 				<li><a href="#"><span>Video &amp; Audio</span></a></li>
-				<li><a href="#"><span style="border-right: none">More &nbsp;<i class="fa fa-caret-down"></i></span></a></li>
+				<li id="more"><a href="#"><span style="border-right: none">More &nbsp;<i class="fa fa-caret-down"></i></span></a>
+				</li>
+				
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -124,11 +127,37 @@
 				<li><a href="#"><span>Scotland</span></a></li>
 				<li><a href="#"><span>Alba</span></a></li>
 				<li><a href="#"><span>Wales</span></a></li>
-				<li><a href="#"><span style="border-right: none">Cymru</span></a></li>
+				<li><a href="#"><span style="border-right: none">Cymru</span></a>
+				</li>
 			</ul>
 		</div>
 	</div>
 	<div class="clearfix"></div>
+	<div id="moredropdown-content">
+					<div class="fixedwidth">
+						<div class="moredropdown-sub">
+						<ul>
+							<li>Magazine</li>
+							<li>In Pictures</li>
+						</ul>
+						</div>
+						<ul>
+							<li>Also in thr News</li>
+							<li>Special Reports</li>
+						</ul>
+						</div>
+						<ul>
+							<li>Explainers</li>
+							<li>The Reporters</li>
+						</ul>
+						<ul>
+							<li>Have Your Say</li>
+							<li>Disability</li>
+						</ul>
+						</div>
+						</div>
+					</div>
+				</div> 
 </header>
 
 <article>
@@ -257,6 +286,10 @@ $(document).ready(function(){
     	$("#topsearch input").val("");
     	$("#hiddenSearch-content").slideUp();
     })
+
+    $("#bottombarmenu #more a").on("click", function(){
+        $(this).addClass("addmorecolor");       
+    });
 
 });
 </script>
