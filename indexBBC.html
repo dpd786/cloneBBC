@@ -82,7 +82,7 @@
 				<div class="hiddenSearch-sub">		
 					<form id="hiddenSearch">
 						<div><input type="search" placeholder="Search">
-							<a href="#"><i class="fa fa-search"></i></a><div id="delcross"><a href="indexBBC.html"><i class="material-icons">close</i></a></div>
+							<a class="searchinput" href="#"><i class="fa fa-search"></i></a><span><a href="#"><i class="material-icons">close</i></a></span>
 						</div>
 					</form>
 				</div>
@@ -252,6 +252,11 @@ $(document).ready(function(){
         $("#hiddenSearch input").val($("#topsearch input").val());
         $("#topsearch input").val(""); 
     });
+
+    $("#hiddenSearch .material-icons").on("click", function() {
+    	$("#topsearch input").val("");
+    	$("#hiddenSearch-content").slideUp();
+    })
 
 });
 </script>
