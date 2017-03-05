@@ -479,11 +479,45 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 #moredropdown-content {
 	isplay: none;
 	overflow: hidden;
-	height: 120px;
+	height: 116px;
 	width: 100%;
+	padding: ;
 	background: #000;
 	color: #fff;
-	border-bottom: 2px solid #bb1919;
+	border-bottom: 4px solid #bb1919;
+}
+.moredropdown-sub {
+	height: 96px;
+	padding: 10px 0;
+}
+.moredropdown-sub ul {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 16px 0;
+	width: 24%;
+}
+.moredropdown-sub ul li {
+	border-right: 1px solid #464646;
+}
+.moredropdown-sub ul li:last-child {
+	padding-top: 20px;
+}
+.moredropdown-sub ul li a {
+	display: block;
+	margin: 0 16px;
+	color: #fff;
+	text-decoration: none;
+}
+.moredropdown-sub ul li i {
+	font-size: 24px;
+	position: relative;
+	top: 3px;
+	color: #cc0000;
+}
+
+.moredropdown-sub ul li a:hover {
+	text-decoration: underline
 }
 
 
