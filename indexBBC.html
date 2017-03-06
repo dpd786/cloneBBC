@@ -110,36 +110,35 @@
 				<li><a href="#"><span>Health</span></a></li>
 				<li><a href="#"><span>Education</span></a></li>
 				<li><a href="#"><span>Entertainment &amp; Arts</span></a></li>
-				<li><a href="#"><span>Video &amp; Audio</span></a></li>
+				<li><a href="#"><span id="lastborder">Video &amp; Audio</span></a></li>
 				<li id="more"><a href="#"><span style="border-right: none">More &nbsp;<i class="fa fa-caret-down"></i></span></a>
+				<div id="moredropdown-content">
+					<div class="fixedwidth">
+						<div id="moredropdown-sub">
+							<ul>
+								<li><a href='#'><span>Magazine</span></a></li>
+								<li><a href='#'><span>In Pictures</span></a></li>
+							</ul>
+							<ul>
+								<li><a href='#'><span>Also in the News</span></a></li>
+								<li><a href='#'><span>Special Reports</span></a></li>
+							</ul>
+							<ul>
+								<li><a href='#'><span>Explainers</span></a></li>
+								<li><a href='#'><span>The Reporters</span></a></li>
+							</ul>
+							<ul>
+								<li><a href='#'><span>Have Your Say</span></a></li>
+								<li><a href='#'><span>Disability</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="clearfix"></div>
-	<div id="moredropdown-content">
-		<div class="fixedwidth">
-			<div class="moredropdown-sub">
-				<ul>
-					<li><a href='#'>Magazine &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
-</a></li>
-					<li><a href='#'>In Pictures</a></li>
-				</ul>
-				<ul>
-					<li><a href='#'>Also in the News</a></li>
-					<li><a href='#'>Special Reports</a></li>
-				</ul>
-				<ul>
-					<li><a href='#'>Explainers</a></li>
-					<li><a href='#'>The Reporters</a></li>
-				</ul>
-				<ul>
-					<li><a href='#'>Have Your Say</a></li>
-					<li><a href='#'>Disability</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	
 	<div class="clearfix"></div>
 	<div id="lowerbar">
 		<div class="fixedwidth">
@@ -284,9 +283,14 @@ $(document).ready(function(){
     	$("#hiddenSearch-content").slideUp();
     })
 
-    $("#bottombarmenu #more a").on("click", function(){
-        $(this).addClass("addmorecolor");       
+   /* $("#bottombarmenu #more a").on("click", function(){
+    	$("#moredropdown-content").toggle();
+        $(this).addClass("addmorecolor");
+        if($("#moredropdown-content").is(":hidden")) {
+        	$("#bottombarmenu #more a").css({"text-decoration": "none"});
+        }
     });
+*/
 
 });
 </script>

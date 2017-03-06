@@ -425,6 +425,7 @@ SET UP BOTTOM BAR OF HEADER
 #bottombar {
 	background-color: rgb(169,23,23);
 	height: 35px;
+	position: relative;
 }
 #bottombar .fixedwidth {
 	padding: 0 9px;
@@ -460,14 +461,17 @@ SET UP BOTTOM BAR OF HEADER
 #bottombarmenu li a:hover {
 	box-shadow: 0 4px 0 #fff;
 }
+
 #bottombarmenu #more a:hover {
 	background-color: #000;
-	box-shadow: 0 3px 0 #000;
+	box-shadow: none;
+	border-bottom: 3px solid #000;
 }
 
 .addmorecolor {
 	background-color: #000;
-	box-shadow: 0 3px 0 #000;
+	border-bottom: 3px solid #000;
+	text-decoration: #fff;
 }
 
 /**********************************************
@@ -479,47 +483,67 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 #moredropdown-content {
 	isplay: none;
 	overflow: hidden;
-	height: 116px;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 35px;
+	left: 0;	
 	width: 100%;
-	padding: ;
 	background: #000;
 	color: #fff;
 	border-bottom: 4px solid #bb1919;
-}
-.moredropdown-sub {
-	height: 96px;
-	padding: 10px 0;
-}
-.moredropdown-sub ul {
+} 
+#moredropdown-sub {
+	height: 116px; 
+} 
+#moredropdown-sub ul {
 	list-style-type: none;
-	display: inline-block;
-	margin: 0;
+	margin: 10px 0;
 	padding: 16px 0;
-	width: 24%;
-}
-.moredropdown-sub ul li {
+	width: 25%;
+	float: left;
+} 
+#moredropdown-sub ul li {
+	line-height: 22px;
 	border-right: 1px solid #464646;
-}
-.moredropdown-sub ul li:last-child {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	display: block;
+} 
+#moredropdown-sub ul li a {
+	display: block;
+	padding: 0;
+	margin: 0 20px;
+	border-bottom: none;
+} 
+#moredropdown-sub ul li + li a {
 	padding-top: 20px;
 }
-.moredropdown-sub ul li a {
-	display: block;
-	margin: 0 16px;
-	color: #fff;
-	text-decoration: none;
+#moredropdown-content #moredropdown-sub ul li a:hover {
+	border-bottom: none;
+	text-decoration: underline;
 }
-.moredropdown-sub ul li i {
+#moredropdown-sub ul li {
+	border-right: 1px solid #464646;
+}
+#moredropdown-sub ul:last-child li {
+	border-right: none;
+}
+#moredropdown-sub span {
+	border-right: none;
+} /*
+moredropdown-sub ul li span:after {
+	content: '\f105';
+	font-family: 'FontAwesome';
+	color: #cc0000;
 	font-size: 24px;
 	position: relative;
 	top: 3px;
-	color: #cc0000;
+	left: 10px;
+	text-decoration: #000;
 }
-
-.moredropdown-sub ul li a:hover {
-	text-decoration: underline
-}
-
+*/
 
 /**********************************************
 
