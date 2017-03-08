@@ -461,27 +461,23 @@ SET UP BOTTOM BAR OF HEADER
 #bottombarmenu li a:hover {
 	box-shadow: 0 4px 0 #fff;
 }
-
-#bottombarmenu #more a:hover {
-	background-color: #000;
+#bottombarmenu li:last-child a:hover {
 	box-shadow: none;
-	border-bottom: 3px solid #000;
-}
-
-.addmorecolor {
+	padding-bottom: 9px;
+	padding-left: 13px;
 	background-color: #000;
-	border-bottom: 3px solid #000;
-	text-decoration: #fff;
+	margin-left: -1px;
 }
 
-/**********************************************
+
+/****************************************** ****
 
 SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 
 **********************************************/
 
 #moredropdown-content {
-	isplay: none;
+	dsplay: none;
 	overflow: hidden;
 	padding: 0;
 	margin: 0;
@@ -523,15 +519,23 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 #moredropdown-content #moredropdown-sub ul li a:hover {
 	border-bottom: none;
 	text-decoration: underline;
-}
-#moredropdown-sub ul li {
-	border-right: 1px solid #464646;
+	box-shadow: none;
+	padding-bottom: 0;
+	padding-left: 0;
+	background-color: #000;
+	margin: 0 20px;
 }
 #moredropdown-sub ul:last-child li {
 	border-right: none;
 }
 #moredropdown-sub span {
 	border-right: none;
+} 
+.addmorecolor {
+	background-color: #000;
+	margin-left: -1px
+	padding-bottom: 9px;
+	padding-left: 13px;
 } /*
 moredropdown-sub ul li span:after {
 	content: '\f105';

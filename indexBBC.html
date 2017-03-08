@@ -110,8 +110,8 @@
 				<li><a href="#"><span>Health</span></a></li>
 				<li><a href="#"><span>Education</span></a></li>
 				<li><a href="#"><span>Entertainment &amp; Arts</span></a></li>
-				<li><a href="#"><span id="lastborder">Video &amp; Audio</span></a></li>
-				<li id="more"><a href="#"><span style="border-right: none">More &nbsp;<i class="fa fa-caret-down"></i></span></a>
+				<li><a href="#"><span>Video &amp; Audio</span></a></li>
+				<li><a id="more" href="#"><span style="border-right: none">More &nbsp;<i class="fa fa-caret-down"></i></span></a>
 				<div id="moredropdown-content">
 					<div class="fixedwidth">
 						<div id="moredropdown-sub">
@@ -283,14 +283,18 @@ $(document).ready(function(){
     	$("#hiddenSearch-content").slideUp();
     })
 
-   /* $("#bottombarmenu #more a").on("click", function(){
+
+    
+    $("#bottombarmenu li #more").on("click", function(){
+    	$(this).addClass("addmorecolor");
     	$("#moredropdown-content").toggle();
-        $(this).addClass("addmorecolor");
+        
+
+        /*$(this).addClass("addmorecolor");
         if($("#moredropdown-content").is(":hidden")) {
         	$("#bottombarmenu #more a").css({"text-decoration": "none"});
-        }
-    });
-*/
+        } */
+    }); 
 
 });
 </script>
