@@ -286,9 +286,11 @@ $(document).ready(function(){
 
     
     $("#bottombarmenu li #more").on("click", function(){
-    	$(this).addClass("addmorecolor");
+    	$(this).css({"background-color": "#000", "margin-left": "-1px", "padding-bottom": "9px", "padding-left": "13px", "text-decoration": "none"});
     	$("#moredropdown-content").toggle();
-        
+        if($("#moredropdown-content").is(":visible")) {
+        	$("#bottombarmenu li #more").css({"text-decoration": "underline"});
+        }
 
         /*$(this).addClass("addmorecolor");
         if($("#moredropdown-content").is(":hidden")) {

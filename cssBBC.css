@@ -477,7 +477,7 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 **********************************************/
 
 #moredropdown-content {
-	dsplay: none;
+	display: none;
 	overflow: hidden;
 	padding: 0;
 	margin: 0;
