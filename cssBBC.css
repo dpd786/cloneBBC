@@ -4,7 +4,9 @@ body {
 	font-family: arial, helvetica, sans-serif;
 	box-sizing: border-box;
 }
-
+li:active, a:active {
+	outline: none;
+}
 
 /**********************************************
 
@@ -116,6 +118,7 @@ SET UP TOP BAR OF HEADER
 	padding: 13px 12px 11px;
 	text-decoration: none;
 	color: #000;
+	outline: none;
 }
 #topsearch  {
 	display: inline-block;
@@ -455,11 +458,17 @@ SET UP BOTTOM BAR OF HEADER
 	text-decoration: none;
 	color: #fff;
 }
+#bottombarmenu li:last-child span {
+	padding-right: 6px;
+}
 #bottombarmenu .selected {
 	box-shadow: 0 4px 0 #fff;
 }
 #bottombarmenu li a:hover {
 	box-shadow: 0 4px 0 #fff;
+}
+#bottombarmenu li:last-child a {
+	padding-right: 12px;
 }
 #bottombarmenu li:last-child a:hover {
 	box-shadow: none;
@@ -467,6 +476,14 @@ SET UP BOTTOM BAR OF HEADER
 	padding-left: 13px;
 	background-color: #000;
 	margin-left: -1px;
+}
+.addmorecolor {
+	background-color: #000;
+	margin-left: -1px;
+	padding-bottom: 9px !important;
+	padding-left: 13px !important;
+	text-decoration: none;
+	outline: none;
 }
 
 
@@ -506,6 +523,7 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 	padding: 0;
 	font-size: 16px;
 	display: block;
+	outline: none;
 } 
 #moredropdown-sub ul li a {
 	display: block;
@@ -524,6 +542,7 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 	padding-left: 0;
 	background-color: #000;
 	margin: 0 20px;
+	outline: none;
 }
 #moredropdown-sub ul:last-child li {
 	border-right: none;
@@ -531,12 +550,7 @@ SET UP DROPDOWN MENU BOTTOM BAR OF HEADER
 #moredropdown-sub span {
 	border-right: none;
 } 
-.addmorecolor {
-	background-color: #000;
-	margin-left: -1px
-	padding-bottom: 9px;
-	padding-left: 13px;
-} /*
+/*
 moredropdown-sub ul li span:after {
 	content: '\f105';
 	font-family: 'FontAwesome';
@@ -603,6 +617,9 @@ article {
 article a {
 	text-decoration: none;
 	color: #000;
+}
+article .newsid {
+	margin-left: 5px;
 }
 article section p:last-of-type {
 	display: inline;
