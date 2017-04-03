@@ -476,6 +476,7 @@ SET UP BOTTOM BAR OF HEADER
 	padding-left: 13px;
 	background-color: #000;
 	margin-left: -1px;
+	text-decoration: underline;
 }
 .addmorecolor {
 	background-color: #000;
