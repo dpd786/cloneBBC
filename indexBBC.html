@@ -85,17 +85,19 @@
 							<a class="searchinput" href="#"><i class="fa fa-search"></i></a><span><a href="#"><i class="material-icons">close</i></a></span>
 						</div>
 					</form>
-					<div id="hiddenSearch-result">	
-						<table>
-							<tr>
-								<td>Headline</td>
-								<td>SubHead</td>
-								<td>Image</td>
-							</tr>
-						</table>
-					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="hiddenSearch-result">
+		<div class="fixedwidth">	
+			<table>
+				<tr>
+					<td>Headline</td>
+					<td>SubHead</td>
+					<td>Image</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -218,6 +220,7 @@
 </article>
 
 <script>
+var letters = /^[A-Za-z]+$/;
 $(document).ready(function(){
     $("#topmenu li.fix").siblings().css({"margin-left": "-5px"});
     
@@ -313,7 +316,11 @@ $(document).ready(function(){
         $("#topsearch").blur();
         //console.log($("#topsearch input").val());
         $("#hiddenSearch input").val($("#topsearch input").val());
-        $("#topsearch input").val(""); 
+        $("#topsearch input").val("");
+
+        if($("#hiddenSearch input").val().match(letters)) {
+        	$("#hiddenSearch-result").css({"display": "block"});
+        }
     });
 
     $("#hiddenSearch .material-icons").on("click", function() {
