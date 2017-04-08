@@ -377,6 +377,13 @@ SET UP DROPSEARCHBAR
 	display: none;
 	background-color: #fff;
 }
+#hiddenSearch-result #suggestions-results {
+	float: left;
+	width: 40%;	
+}
+#hiddenSearch-result #suggestions-plays {
+	float: left;
+}
 
 /**********************************************
 
