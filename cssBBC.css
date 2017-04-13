@@ -374,7 +374,7 @@ SET UP DROPSEARCHBAR
 	margin-top: 11px;
 }
 #hiddenSearch-result {
-	display: none;
+	display: block;
 	background-color: #fff;
 }
 #hiddenSearch-result #suggestions-results {
