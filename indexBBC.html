@@ -90,7 +90,6 @@
 		</div>
 	</div>
 	<div id="hiddenSearch-result">
-	<h1>TESTING</h1>
 		<div class="fixedwidth">	
 			<div id="suggestions-results"></div>			
 		</div>
@@ -317,6 +316,7 @@ $(document).ready(function(){
 
         if($("#hiddenSearch input").val().match(letters)) {
         	$("#hiddenSearch-result").css({"display": "block"});
+        	dis();
         }
     });
 
@@ -343,14 +343,10 @@ $(document).ready(function(){
 			}
 		};
 
-		xmlhttp.open("GET", "localhost/select.php", true);
+		xmlhttp.open("GET", "select.php", true);
 		xmlhttp.send();
 
 	}
-
-	setInterval(function() {
-		dis();
-	}, 2000);
 
 });
 </script>

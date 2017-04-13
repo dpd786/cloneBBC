@@ -33,7 +33,7 @@ SET UP TOP BAR OF HEADER
 	font-weight: bold;
 	color: #000;
 	position: relative;
-	left: -1px;
+	left: -2px;
 	top: -1px;
 }
 .fixedwidth {
