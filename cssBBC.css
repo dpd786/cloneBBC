@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: arial, helvetica, sans-serif;
 	box-sizing: border-box;
+	min-width: 1024px;
 }
 li:active, a {
 	outline: none;
@@ -26,7 +27,7 @@ SET UP TOP BAR OF HEADER
 }
 .fixedwidth {
 	width: 1000px;
-	margin: 0 170px;
+	margin: 0 auto;
 	padding: 0 15px;
 }
 .clearfix {
