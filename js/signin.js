@@ -1,59 +1,3 @@
-<!doctype html>
-<html>
-<head>
- <title>Learning CSS</title>
-
- <meta charset="utf-8" />
- <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
- </script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="cssBBCsignin.css">
-</head>
-<body>
-	<header>
-		<div id="delcross"><a href="indexBBC.html"><i class="material-icons">close</i></a></div>
-		<div class="fixedwidth">
-			<div id="formdiv">
-				<form method="get" action='#' id="signinform">	
-					<img src="images/bbclogo.png">
-					<h2>Sign in</h2>
-					<div class="group">
-						<input id="username" autocomplete="off" type="text" name="username" required />
-						<label for="username">Email or username</label>
-						<span class="bar"></span>
-						<div class="errorbar"></div>
-						<p class="errormess">Sorry, that username's too short. It needs to be at least two characters.</p>
-						<p id="errormess2">Something's missing. Please check and try again.</p>
-					</div>
-					<div class="group">
-						<input id="password" autocomplet="off" type="Password" name="password" required>
-						<label for="password">Password</label>
-						<span class="bar"></span>
-						<div class="errorbar"></div>
-						<p class="errormess">Sorry, that password is too short. It needs to be six characters or more.</p>
-					</div>
-					<button type="submit" form="signinform" id="signin">Sign in</button>
-					<p id="lastp"><a href='#'>Need help signing in?</a></p>
-				</form>
-			</div>
-			<div id="formdiv2">
-				<h3>Don't have a BBC account yet?</h3>
-				<p><a href='#'>Register now</a></p>
-			</div>
-		</div>
-	</header>
-	<footer>
-		Footer info here
-	</footer>
-
-
-<script src="js/signin.js"></script>
-
-<!--
-<script>
 var kusercheck = false;
 var kpasscheck = false;
 var userok = false;
@@ -155,10 +99,3 @@ $(document).ready(function(){
 	    } 	
     });    	
 });
-
-
-</script>
--->
-
-</body>
-</html>
