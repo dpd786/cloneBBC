@@ -81,7 +81,7 @@
 			<div class="fixedwidth">
 				<div class="hiddenSearch-sub">		
 					<form id="hiddenSearch">
-						<div><input type="search" placeholder="Search">
+						<div><input type="search" placeholder="Search" />
 							<a class="searchinput" href="#"><i class="fa fa-search"></i></a><span><a href="#"><i class="material-icons">close</i></a></span>
 						</div>
 					</form>
@@ -186,9 +186,9 @@
 	<div class="fixedwidth">
 		<section id="second1" class="colw"><a href='#' id='sec1'>
 			<img src="images/sectionsecondfirst.PNG">
-			<h5>Six killed in Canada mosque shooting</h5>
-	 		<p>Shots were fired at the Quebec Islamic Cultural Centre late on Sunday, with two suspects arrested.</p>
-			<p><span class="lnright">&#8986; 11h</span></p></a><p><a href='#' class="newsid">US &amp; Canada</a></p>
+			<h5>Chelsea beat Spurs to reach FA Cup final</h5>
+	 		<p>Nemanja Matic scores a stunning goal as Chelsea beat Tottenham in a thrilling semifinal at Wembley.</p>
+			<p><span class="lnright">&#8986; 12m</span></p></a><p><a href='#' class="newsid">BBC Sport</a></p>
 		</section>
 		<section id="second2" class="colw"><a href='#' id=sec2>
 			<img src="images/sectionsecondsecond.PNG">
@@ -213,6 +213,9 @@
 	<div class="fixedwidth bottommarg"></div>
 </article>
 
+<script src="js/main.js"></script>
+
+<!--
 <script>
 var letters = /^[A-Za-z]+$/;
 $(document).ready(function(){
@@ -316,7 +319,8 @@ $(document).ready(function(){
 
         if($("#hiddenSearch input").val().match(letters)) {
         	$("#hiddenSearch-result").css({"display": "block"});
-        	dis();
+        	/*RUN WHEN CONNECT TO DATABASE
+        	dis(); */
         }
     });
 
@@ -335,7 +339,8 @@ $(document).ready(function(){
         }
     }); 
 
-    function dis() {
+/* For data request from database
+	  function dis() {
 		var xmlhttp = new XMLHttpRequest ();
 		xmlhttp.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
@@ -347,9 +352,11 @@ $(document).ready(function(){
 		xmlhttp.send();
 
 	}
+*/
 
 });
 </script>
+-->
 
 </body>
 </html>
