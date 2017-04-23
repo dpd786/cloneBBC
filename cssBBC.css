@@ -564,25 +564,27 @@ SET UP BOTTOM BAR OF HEADER
 	padding-right: 6px;
 }
 #bottombarmenu .selected {
-	box-shadow: 0 4px 0 #fff;
+	border-bottom: 4px solid #fff;
 }
 #bottombarmenu li a:hover {
-	box-shadow: 0 4px 0 #fff;
+	border-bottom: 4px solid #fff;
+}
+#bottombarmenu .more a {
+	text-decoration: none;
 }
 #bottombarmenu .last-more a:hover {
-	box-shadow: none;
+	border-bottom: none;
 	box-shadow: 0 4px 0 #000;
 	padding-left: 13px;
 	background-color: #000;
 	margin-left: -1px;
-	text-decoration: underline;
+	text-decoration: none;
 }
 .addmorecolor {
 	background-color: #000;
 	margin-left: -1px;
 	padding-bottom: 10px !important;
 	padding-left: 1px !important;
-	text-decoration: none;
 	outline: none;
 }
 .more .fa-caret-down {
@@ -703,7 +705,7 @@ SET UP LOWER BAR OF HEADER
 	color: #000;
 }
 #lowerbarmenu li a:hover {
-	box-shadow: 0 4px 0 #bb1919;
+	border-bottom: 4px solid #bb1919;
 }
 
 /**********************************************
