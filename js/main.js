@@ -9,7 +9,8 @@ $(document).ready(function(){
     
     $("body").on("focusout", function() {
 		if($("#moredropdown-content").is(":hidden")) {
-			$("#bottombarmenu .more").removeClass("addmorecolor");
+			$("#bottombarmenu .last-more").removeClass("addmorecolor");
+
 		} else if($("#moredropdown-content").is(":visible")) {
 			$("#bottombarmenu li .more").css({"text-decoration": "none"});
 		}
@@ -111,13 +112,15 @@ $(document).ready(function(){
     })
 
     
-    $("#bottombarmenu .more").on("click", function(){
+    $("#bottombarmenu .last-more").on("click", function(){
     	$(this).addClass("addmorecolor").css({"text-decoration": "none", "outline": "none"});
     	$("#moredropdown-content").toggle();
         if($("#moredropdown-content").is(":visible")) {
         	$("#bottombarmenu li .more").css({"text-decoration": "underline"});
         }
     }); 
+
+        
 
  /*MAKE ACTIVE WHEN CONNECTED TO DATABASE
     function dis() {
