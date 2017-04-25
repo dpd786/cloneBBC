@@ -10,6 +10,7 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	color: #000;
+	min-width: 1050px
 }
 
 /**********************************************
@@ -216,10 +217,11 @@ button:hover {
 	margin-top: 30px;
 }
 
-footer {
+#footer {
 	margin-top: 200px;
 	height: 140px;
 	background-color: #2d2d2d;
 	color: #fff;
+	width: 100%;
 	text-align: center;
 }
