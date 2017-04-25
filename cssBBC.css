@@ -757,6 +757,7 @@ article section p:last-of-type {
 	font-size: 14px;
 	margin: 8px 0;
 	line-height: 18px;
+	cursor: pointer;
 }
 #first ul {
 	font-weight: bold;
