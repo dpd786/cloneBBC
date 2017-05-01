@@ -122,6 +122,14 @@ $(document).ready(function(){
         }
     }); 
 
+    $(window).resize(function() {
+        var bWidth = $(window).width();
+        if(bWidth < 1000) {
+            $('#signindiv a').css({"padding-right": "10px"});
+            $('#signindiv span').remove();
+            //$('.hiddenMenu-sub ul li:first-child').remove();
+        }
+    });
         
 
  /*MAKE ACTIVE WHEN CONNECTED TO DATABASE
