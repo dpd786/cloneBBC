@@ -1,4 +1,4 @@
-# cloneBBC
+.# cloneBBC
 
 Try out topbar: signin, bell, More and search bar.
 Try lower bar: More
